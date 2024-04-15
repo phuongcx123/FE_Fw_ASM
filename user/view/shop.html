@@ -1,0 +1,287 @@
+<main>
+    <div class="container-fluid">
+        <div class="row pb-2">
+            <div class="col-12 px-0">
+                <div class="background">
+                    <div class="container mt-4">
+
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item "><a class="nav-link fw-bold" href="#!/">Home</a></li>
+                                <li class="breadcrumb-item active text-danger fw-medium" aria-current="page">Shop</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-2">
+            <div class="row">
+                <div class="col-md-3 col-12 order-md-1 order-2">
+
+                    <div class="card">
+                        <div class="card-header">
+                            Categories
+                        </div>
+                        <div class="card-body ">
+                            <ul class="list-group ">
+                                <li class="list-group-item border-0" ng-repeat="(i,v) in cate">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox"> {{v.name_cate}}</label>
+                                </li>
+                            </ul>
+                            <small class="ms-3 text-primary">Show more+</small>
+                        </div>
+                    </div>
+                    <div class="card mt-4">
+                        <div class="card-header">
+                            Smartphone
+                        </div>
+                        <div class="card-body ">
+                            <ul class="list-group ">
+                                <li class="list-group-item border-0">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox1">
+                                    <label class="form-check-label" for="firstCheckbox1">All</label>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox1">
+                                    <label class="form-check-label" for="secondCheckbox1">Apple (11)</label>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox1">
+                                    <label class="form-check-label" for="thirdCheckbox1">Samsumg (53)</label>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox11">
+                                    <label class="form-check-label" for="thirdCheckbox11">XaoMi (22)</label>
+                                </li>
+
+                            </ul>
+                            <small class="ms-3 text-primary">Show more+</small>
+                        </div>
+                    </div>
+                    <div class="card mt-4">
+                        <div class="card-header">
+                            Price
+                        </div>
+                        <div class="card-body ">
+                            <input type="range" class="form-range" id="customRange1">
+                            <div class="d-flex justify-content-between">
+                                <p>$0</p>
+                                <p>$500</p>
+                            </div>
+
+                            <!-- <small class="ms-3 text-primary">Show more+</small> -->
+                        </div>
+                    </div>
+                    <div class="card mt-4">
+                        <div class="card-header">
+                            Ratinga
+                        </div>
+                        <div class="card-body ">
+                            <ul class="list-group ">
+                                <li class="list-group-item border-0">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox5">
+                                    <label class="form-check-label" for="firstCheckbox5">
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i> (42)
+                                    </label>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="rate1">
+                                    <label class="form-check-label" for="rate1">
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #cac9cf;"></i>
+                                        (23)
+                                    </label>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="rate2">
+                                    <label class="form-check-label" for="rate2">
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #cac9cf;"></i>
+                                        <i class="fa-solid fa-star" style="color: #cac9cf;"></i>
+                                        (11)
+                                    </label>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="rate3">
+                                    <label class="form-check-label" for="rate3">
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #cac9cf;"></i>
+                                        <i class="fa-solid fa-star" style="color: #cac9cf;"></i>
+                                        <i class="fa-solid fa-star" style="color: #cac9cf;"></i>
+
+                                        (7)
+                                    </label>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="rate4">
+                                    <label class="form-check-label" for="rate4">
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #cac9cf;"></i>
+                                        <i class="fa-solid fa-star" style="color: #cac9cf;"></i>
+                                        <i class="fa-solid fa-star" style="color: #cac9cf;"></i>
+                                        <i class="fa-solid fa-star" style="color: #cac9cf;"></i>
+
+                                        (3)
+                                    </label>
+                                </li>
+
+                            </ul>
+                            <!-- <small class="ms-3 text-primary">Show more+</small> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-12 order-md-2 order-1">
+                    <div class="container">
+                        <div class="row justify-content-md-between flex-md-row flex-column align-items-center">
+                            <div class="col-md-5 col-12 ">
+                                <p class="text-center text-md-start">Showing {{listPro.length}} Total Results</p>
+                            </div>
+                            <div class="col-md-7 col-9 ">
+                                <div class="row justify-content-md-end align-items-center">
+                                    <div class="col-md-auto px-0 col-8 d-flex align-items-center">
+                                       
+                                    </div>
+                                    <div class="col-md-auto col-4 px-0">
+                                        <ul class="nav nav-tabs justify-content-end border-bottom-0" id="myTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i
+                                                        class="fa-solid fa-table-cells"></i></button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i
+                                                        class="fa-solid fa-list-ul"></i></button>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-content" id="myTabContent">
+                            <!-- begin courses grid  -->
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                <div class="container-fluid ">
+                                    <div class="row mt-3 ">
+                                        <div class="col-lg-4 col-md-4 mt-4 mt-md-4" ng-repeat="v in listPro | limitTo : 9 ">
+                                            <div class="card px-3 pt-3">
+                                                <img src="{{v.image}}" class="card-img-top" alt="...">
+                                                <div class="card-body p-0">
+                                                    <div class="card-text d-flex align-items-center ">
+                                                        <span class="text-warning  ">
+                                                        <i class="fa-solid fa-star fa-2xs"></i>
+                                                        <i class="fa-solid fa-star fa-2xs"></i>
+                                                        <i class="fa-solid fa-star fa-2xs"></i>
+                                                        <i class="fa-regular fa-star fa-2xs"></i>
+                                                        <i class="fa-regular fa-star fa-2xs"></i>
+                                                    </span>
+                                                        <p class="text-bo ms-3 text-dark mt-3 opacity-50 ">
+                                                            (126) Review
+                                                        </p>
+                                                    </div>
+                                                    <a href="#!/product/{{v.id}}" class="card-title fw-medium fs-6 nav-link">{{v.name}}</a>
+
+                                                </div>
+                                                <div class="d-flex justify-content-between py-2 mb-2 align-items-center">
+                                                    <p class="mt-2">
+                                                        <span class="fw-bold text-danger text-primary">{{v.price - (v.price * v.sale/100) |currency }}</span><span class="text-decoration-line-through ms-2 text-dark opacity-50 fw-bolder ">{{v.price | currency }}</span>
+                                                    </p>
+
+                                                    <button  class="btn btn-outline-danger fs-6 border-dark  text-center rounded-circle p-2" style="width: 40px; height: 100%; " ng-click="addCart(v.id)"><i class="fa-solid  fa-cart-shopping"  ></i></button>
+                                                    
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                     
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end courses grid  -->
+
+                            <!--begin  courses Horizontal -->
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+
+                                <div class="card pt-3 ps-3 pe-3 mt-4" ng-repeat="v in listPro ">
+                                    <div class="row g-0 justify-content-between ">
+                                        <div class="col-md-4">
+                                            <img src="{{v.image}}" class="img-fluid rounded" alt="...">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="card-body p-0">
+                                                <div class="card-text d-flex align-items-center justify-content-between ">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="text-warning  ">
+                                                        <i class="fa-solid fa-star fa-2xs"></i>
+                                                        <i class="fa-solid fa-star fa-2xs"></i>
+                                                        <i class="fa-solid fa-star fa-2xs"></i>
+                                                        <i class="fa-regular fa-star fa-2xs"></i>
+                                                        <i class="fa-regular fa-star fa-2xs"></i>
+                                                     </span>
+                                                        <p class="text-bo ms-3 text-dark mt-3 opacity-50 ">
+                                                            (126) Review
+                                                        </p>
+                                                    </div>
+                                                    <span class="fw-bold text-danger fw-bold ">{{v.price - (v.price * v.sale/100) |currency }}</span>
+                                                </div>
+                                                <a href="#!/product/{{v.id}}" class="card-title nav-link fw-medium fs-5">{{v.name}} </a>
+
+                                                <p class="mb-0">{{v.content}}</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between py-2 mb-2">
+                                                <a href="#" class="btn btn-outline-danger fs-6 border-dark rounded-pill"><i class="fa-solid mx-2 fa-cart-shopping"></i>Buy
+                                                    now</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end courses horizontal  -->
+                        </div>
+
+                        <!-- begin pagination  -->
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center mt-5">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- end pagination -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</main>

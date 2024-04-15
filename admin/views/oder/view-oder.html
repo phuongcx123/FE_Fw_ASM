@@ -1,0 +1,84 @@
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Dashboard</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Oder</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- End Page Title -->
+
+    <section class="section dashboard">
+        <div class="row">
+
+            <!-- Left side columns -->
+            <div class="col-lg-12">
+                <div class="row">
+
+                    <div class="col-12">
+                        <div class="card top-selling overflow-auto">
+                            <div class="card-body pb-0">
+                                <h5 class="card-title">Order <span>| #{{id}}</span></h5>
+                                <div class="d-flex justify-content-between">
+                                    <ul class="list-group mb-4 border-0 ">
+                                        <li class="list-group-item border-0 "><span class="fw-medium">UserName :</span> {{data.name}}</li>
+                                        <li class="list-group-item border-0 "> <span class="fw-medium">Address :</span> {{data.address}}</li>
+                                        <li class="list-group-item border-0 "><span class="fw-medium">Phone : </span>{{data.sdt}}</li>
+                                        <li class="list-group-item border-0 "><span class="fw-medium">Date Order :</span> {{data.date | date : 'dd/MM/yyyy'}}</li>
+                                    </ul>
+                                    <select class="form-select h-25" style="width: 250px;" ng-model="data.active">
+                                    
+                                    <option value="1">Wait for confirmation</option>
+                                    <option value="2">Confirmed</option>
+                                    <option value="3">Received</option>
+                                    <option value="4">Cancelled</option>
+                                  </select>
+                                </div>
+                                <table class="table table-hover table-sm text-center">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+
+                                            <th scope="col">Preview</th>
+                                            <th scope="col">UserName</th>
+
+                                            <th scope="col">Price</th>
+
+                                            <th scope="col">Quantity</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-group-divider">
+                                        <tr ng-repeat="(index , val) in data.id_pro">
+                                            <td>{{index+1}}</td>
+                                            <td><img src="{{san_pham[index].image}}" alt="" width="100"></td>
+                                            <td>{{san_pham[index].name}}</td>
+
+                                            <td>{{san_pham[index].price - (san_pham[index].price * san_pham[index].sale )/100 | currency}} </td>
+                                            <td>{{so_luong[index]}}</td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+                                <button class="btn btn-primary m-3" ng-click="save()">Save</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- End Left side columns -->
+
+
+
+
+        </div>
+    </section>
+
+</main>

@@ -1,0 +1,70 @@
+<main>
+    <div class="container-fluid">
+        <!-- begin banner  -->
+        <div class="row pb-2">
+            <div class="col-12 px-0">
+                <div class="background">
+                    <div class="container mt-4">
+
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item "><a class="nav-link fw-bold" href="index.html">Home</a></li>
+                                <li class="breadcrumb-item text-danger fw-medium active" aria-current="page">Sign Up</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end banner  -->
+
+        <!-- begin form sign up -->
+        <div class="container">
+            <div class="row ">
+                <div class="col-3"></div>
+                <div class="col-md-6 col-12 border rounded shadow px-4 bg-light-subtle">
+                    <div class="col-12 pt-3 border-bottom pb-4 ">
+                        <h2 class="fw-bold">Create Your Account</h2>
+                        <p class="fs-5 text-black-50">Hey there! Ready to join the party? We just need a few details from you to get started. Let's do this!</p>
+                        <button class="border rounded w-100 bg-white py-2">  <img src="../lib/img/icon/google-logo-6278331_960_720.webp" class="me-2" width="20px" alt="">Continue
+                            with google</button>
+
+                    </div>
+                    <div class="col-12">
+                        <form>
+                            
+                                    <div class="mb-3 mt-5">
+                                        <label for="exampleInputEmail11" class="form-label fw-semibold fs-4 ">Name</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail11"  placeholder="Name" ng-model="data.name_user">
+                                        <span class="text-danger" ng-show="validate.name"> {{name}}</span>
+                                    </div>
+                                </div>
+                         
+                            <div class="mb-3 ">
+                                <label for="exampleInputEmail1" class="form-label fw-semibold fs-4 ">UserName</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="UserName" ng-model="data.username">
+                                <span class="text-danger" ng-show="validate.user"> {{user}}</span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label fw-semibold fs-4 ">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="data.password">
+                                <span class="text-danger" ng-show="validate.pass"> {{pass}}</span>
+                            </div>
+                           
+
+
+                            <button type="submit" class="btn btn-outline-danger w-100 mb-3 mt-3 py-3 rounded-pill border-black border-2 fw-semibold" ng-click="signup()">Sign
+                                up<i class="ms-2 fa-solid fa-arrow-right"></i></button>
+                            <p class="text-black-50 text-center mb-">Already have an account?
+                                <a href="#!/login" class="text-primary text-decoration-underline "> Login</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+
+        <!-- end form sign up  -->
+    </div>
+</main>

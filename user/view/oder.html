@@ -1,0 +1,63 @@
+<main class="my-2">
+    <div class="container-fluid">
+
+        <div class="container-md container-fluid">
+            <div class="row">
+                <div class="col-12 border rounded">
+                    <h5 class="text-center mt-2 mb-4">Thông Tin Đơn Hàng </h5>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-5 d-block justify-content-center ">
+                                <p class="border-bottom w-75 d-flex justify-content-between p-1"><span class="fs-6 fw-medium">Name : </span><span>{{data.name}}</span></p>
+                                <p class="border-bottom w-75 d-flex justify-content-between p-1"><span class="fs-6 fw-medium">Phone : </span><span>{{data.sdt}}</span></p>
+                                <p class="border-bottom w-75 d-flex justify-content-between p-1"><span class="fs-6 fw-medium">Address : </span><span>{{data.address}} </span></p>
+                                <p class="border-bottom w-75 d-flex justify-content-between p-1"><span class="fs-6 fw-medium">Email : </span><span>{{data.email}}</span></p>  
+                                <p class="border-bottom w-75 d-flex justify-content-between p-1"><span class="fs-6 fw-medium">Date : </span><span>{{data.date | date : 'dd-MM-yyyy'}}</span></p>
+                            </div>
+                            <div class="col-7">
+                                <div class="mb-2 d-flex justify-content-between ">
+                                    <p>Mã Đơn : #{{data.id}}</p>
+
+                                    <p ng-if="data.active == 1">Trạng Thái : <span class="badge rounded-pill text-bg-warning">Chờ xác nhận</span></p>
+                                    <p ng-if="data.active == 2">Trạng Thái : <span class="badge rounded-pill text-bg-primary">Đã xác nhận</span></p>
+                                    <p ng-if="data.active == 3">Trạng Thái : <span class="badge rounded-pill text-bg-success">Đã nhận</span></p>
+                                    <p ng-if="data.active == 4">Trạng Thái : <span class="badge rounded-pill text-bg-danger">Đã hủy</span></p>
+                                </div>
+                                <div class="mb-1">
+                                    <div class="container">
+                                        <div class="row  p-2" ng-repeat="(index ,value) in data.id_pro" >
+                                            <div class="col-2 border-bottom">
+                                                <img src=" {{san_pham[index].image}}" alt="" height="70px" width="50">
+                                            </div>
+                                            <div class="col-7 border-bottom">
+                                                <p class="fw-bold"> {{san_pham[index].name}}</p>
+                                                <p class="d-flex justify-content-between "> <span class="align-items-center ">số Lượng :  {{so_luong[index]}} </span> <span class="fw-bold " >Giá :  {{san_pham[index].price - (san_pham[index].price * san_pham[index].sale )/100  | currency}}</span> </p>
+                                            </div>
+                                          
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-12 d-flex justify-content-end">
+                                <p class="fw-bold text-danger ">Tổng : <span class="text-danger-emphasis" >{{data.Tong |currency}}</span></p>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-9">
+
+                            </div>
+                            <div class="col-3 d-flex justify-content-end">
+                                <button class="btn btn-danger my-2  " ng-if="data.active == 1"  ng-click="save()">   Hủy Đơn</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</main>

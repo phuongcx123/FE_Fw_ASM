@@ -1,0 +1,126 @@
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Dashboard</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Oder</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- End Page Title -->
+
+    <section class="section dashboard">
+        <div class="row">
+
+            <!-- Left side columns -->
+            <div class="col-lg-12">
+                <div class="row">
+
+                    <!-- Recent Sales -->
+                    <div class="col-12">
+                        <div class="card recent-sales overflow-auto">
+
+                            <div class="filter">
+                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                    <li class="dropdown-header text-start">
+                                        <h6>Filter</h6>
+                                    </li>
+
+                                    <li><a class="dropdown-item" href="#">Today</a></li>
+                                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Recent Sales <span>| Today</span></h5>
+
+                                <canvas id="myChart" width="100px" height="50px"></canvas>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End Recent Sales -->
+
+                    <!-- Top Selling -->
+                    <div class="col-12">
+                        <div class="card top-selling overflow-auto">
+
+                            <div class="filter">
+                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                    <li class="dropdown-header text-start">
+                                        <h6>Filter</h6>
+                                    </li>
+
+                                    <li><a class="dropdown-item" href="#">Today</a></li>
+                                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="card-body pb-0">
+                                <h5 class="card-title">Order <span>| Today</span></h5>
+                                <p class="card-text d-flex justify-content-end mt-3">
+                                    <input class="form-control  w-25 " type="search" placeholder="Search" ng-model="locuser" aria-label="Search">
+                                </p>
+                                <table class="table table-hover table-sm text-center">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            
+                                            <th scope="col">Code orders</th>
+                                            <th scope="col">UserName<i class=" ms-1 bi bi-arrow-down-up " ng-click="sortData('name')"></i></th>
+                                            <th scope="col">Address</th>
+                                            <th scope="col">Price</th>
+                                            <th scope="col">Date<i class=" ms-1 bi bi-arrow-down-up " ng-click="sortData('date')"></i></th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Act</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-group-divider">
+                                        <tr class="align-baseline" ng-repeat="(index,value) in listOder | filter : {id : locuser} |orderBy : columnName : reserve ">
+                                            <td scope="col" class="fw-bold">{{index+1}}</td>
+                                            <td class="text-primary fw-bold" >#{{value.id}}</td>
+                                            <td class="fw-medium">{{ value.name| uppercase}}</td>
+                                            <td>{{value.address }}</td>
+                                            <td class="fw-bold text-danger">{{value.Tong | currency }}</td>
+                                            <td>{{value.date | date : "dd/MM/yyyy"}}</td>
+                                            <td>
+                                                <span class="badge rounded-pill text-bg-warning p-2  " ng-if="value.active==1">Wait for confirmation</span>
+                                                <span class="badge rounded-pill text-bg-primary p-2  " ng-if="value.active==2">Confirmed</span>
+                                                <span class="badge rounded-pill text-bg-success p-2  " ng-if="value.active==3">Received</span>
+                                                <span class="badge rounded-pill text-bg-danger  p-2 " ng-if="value.active==4">Cancelled</span>
+                                            </td>
+        
+                                            <td>
+                                                <a class="btn btn bg-success text-light" href="#!/view-oder/{{value.id}}"><i class="bi bi-eye-fill"></i></a>
+                                                <button id="showAlertButton" class="btn btn-danger"  ng-click="deleteUser(value.id)"><i class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+        
+                                    </tbody>
+        
+                                </table>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End Top Selling -->
+
+                </div>
+            </div>
+            <!-- End Left side columns -->
+
+
+
+
+        </div>
+    </section>
+
+</main>

@@ -1,0 +1,26 @@
+.boder {
+    border-left: 1px solid black  ; 
+}
+.text-bo{
+    font-size: 12px;
+}
+.bacl { 
+    background-image: url("../img/bg/bg_24.jpg") ;
+}
+.nav-pills .nav-link.active {
+    background-color: rgb(215, 215, 13);
+    color: white; /* Đổi màu chữ thành trắng hoặc màu phù hợp */
+}
+.nav-pills .nav-link {
+    color: black; /* Màu chữ khi tab chưa active */
+  }
+.swal2-actions .swal2-cancel {
+    margin: 0 10px;
+}
+.nav-1 {
+    text-decoration: none; 
+    color: black;
+}
+.swal2-confirm .btn {
+    background-color: rgb(6, 167, 6);
+}

@@ -1,0 +1,69 @@
+<main class="my-2">
+    <div class="container-fluid">
+        <!-- begin banner  -->
+        <div class="row pb-2">
+            <div class="col-12 px-0">
+                <div class="background">
+                    <div class="container mt-4">
+
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item "><a class="nav-link fw-bold" href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active text-danger fw-medium" aria-current="page">Login</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end banner  -->
+
+        <!-- begin form login  -->
+        <div class="container-md container-fluid">
+            <div class="row ">
+                <!-- <div class="col-3"></div> -->
+                <div class="col-md-10 col-12 mx-auto  border rounded shadow px-4 bg-light-subtle d-lg-flex d-block ">
+                    <div class="col-12 col-md-5 pt-3 border-bottom pb-4  me-5 text-center">
+                        <h2 class="fw-medium text-center">Welcome back! </h2>
+                        <p>Welcome to Radios We are from Ant Technology Co.</p>
+                        <img src="../../lib/img/sile/hhh-1636545376479482233245.webp" alt="" class="w-100 m-auto">
+
+                    </div>
+
+                    <div class="col-md-6 col-12 pt-3 border-bottom pb-4  me-5 ">
+                        <h2 class="fw-medium text-center">Login to Your Account</h2>
+                        <p class="text-center">Enter your username & password to login</p>
+                        <form class="text-center">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Username" ng-model="username">
+                                <label for="floatingInput">Username</label>
+                                <span class="text-danger d-flex" ng-show="validate.name">{{user}}</span>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" ng-model="password">
+                                <label for="floatingPassword">Password</label>
+                                <span class="text-danger d-flex" ng-show="validate.pass">{{pass}}</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                                </div>
+                                <a href="#">Forgot Password?</a>
+                            </div>
+
+                            <button type="submit" class="btn btn-outline-danger fw-bold  px-4 py-2 mb-4 mt-2  m-auto text-center  border-2 fw-semibold" ng-click="login()">Login</button>
+                            <p class="text-black-50 text-center mb-">Don't have an account?<a href="#!/signup" class="text-primary text-decoration-underline ">Sign Up</a></p>
+                        </form>
+                    </div>
+                </div>
+                <!-- <div class="col-3"></div> -->
+
+            </div>
+        </div>
+
+        <!-- end form login  -->
+    </div>
+</main>

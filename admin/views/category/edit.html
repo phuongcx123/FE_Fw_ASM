@@ -1,0 +1,38 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>PRODUCTS</h1>
+        <nav>
+            <ol class="breadcrumb mt-3">
+                <li class="breadcrumb-item"><a href="#!/">Home</a></li>
+                <li class="breadcrumb-item active">Category</li>
+            </ol>
+        </nav>
+    </div>
+    <section class="section dashboard">
+        <div class="row">
+            <div class="col-12">
+                <div class="container w-100 ">
+                    <div class="w-100 h-100 m-auto">
+                        <form class="mt-5 border border-warning rounded-3 p-4 bg-white">
+                            <div class="mb-4">
+                                <label for="exampleInputEmail1" class="form-label">ID</label>
+                                <input type="text" class="form-control" id="inputGroupFile02" placeholder="AuTo Number" disabled >
+                            </div>
+                           
+                            <div class="mb-4">
+                                <label for="exampleInputEmail1" class="form-label">Name</label>
+                        
+                                <input type="text" class="form-control" ng-model="cate_data.name_cate" id="inputGroupFile02" placeholder="UserName">
+                                <span class="text-danger fs-6" ng-show="validate.name">{{error.name}}</span>
+                            </div>
+                           
+                            <button type="submit" class="btn btn-primary " ng-click="SaveCate()">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>

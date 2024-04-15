@@ -1,0 +1,363 @@
+<main class="my-2">
+    <div class="container-fluid">
+        <!-- begin banner  -->
+        <div class="row pb-2">
+            <div class="col-12 px-0">
+                <div class="background">
+                    <div class="container mt-4">
+
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a class="nav-link fw-bold" href="#!/">Home</a></li>
+                                <li class="breadcrumb-item "><a class="nav-1 fw-medium" href="#!/shop">Smartphone</a></li>
+                                <li class="breadcrumb-item active text-danger fw-medium" aria-current="page">  {{listPro.name}}</li>
+                              
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end banner  -->
+
+
+        <div class="container ">
+            <div class="row">
+                <div class="col-lg-5 col-sm-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 w-100 pb-3 w-75 h-75 d-flex justify-content-center    ">
+                                <img src="  {{listPro.image}}" class="img-thumbnail  border-warning    h-50 p-5" alt="...">
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <img src="../lib/img/product/img_178.png" class="img-thumbnail btn border-warning  " alt="" width="100px" height="100px">
+                                <img src="../lib/img/product/img_179.png" class="img-thumbnail btn border-warning  " alt="" width="100px" height="100px">
+
+                                <img src="../lib/img/product/img_180.png" class="img-thumbnail btn border-warning" alt="" width="100px" height="100px">
+
+                                <img src="../lib/img/product/img_181.png" class="img-thumbnail btn border-warning  " alt="" width="100px" height="100px">
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12 bg-body mx-lg-3 mx-sm-0 ">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 p-0 ">
+                                <h1 class="text-capitalize fs-4 mt-lg-0 mt-3 p-0  fw-semibold">  {{listPro.name}} </h1>
+                                <div class="card-text d-flex align-items-center ">
+                                    <span class="text-warning  ">
+                                    <i class="fa-solid fa-star fa-sm   "></i>
+                                    <i class="fa-solid fa-star fa-sm "></i>
+                                    <i class="fa-solid fa-star fa-sm "></i>
+                                    <i class="fa-regular fa-star fa-sm "></i>
+                                    <i class="fa-regular fa-star fa-sm "></i>
+                                </span>
+                                    <p class="ms-3 text-dark mt-3 opacity-50 ">
+                                        (126 Customer review)
+                                    </p>
+                                </div>
+                                <div class="d-flex">
+                                    <p class="fs-5"> {{listPro.price - (listPro.price * listPro.sale/100) | currency}}</p> <span class="text-decoration-line-through ms-2 fs-5 opacity-50">  {{listPro.price | currency}}</span>
+                                </div>
+                               
+                                <div class="container p-0  d-flex">
+                                    <div class="col-3">
+                                        <span class="fw-bold text-secondary"> Model : </span>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="row row-cols-2 row-cols-lg-5 g-lg-3 g-sm-4 ">
+
+                                            <div class="col p-2 p-lg-0">
+                                                <span class="border border-warning  p-1 btn " style="width:60px;">TYK</span>
+                                            </div>
+                                            <div class="col p-2 p-lg-0">
+                                                <span class="border p-1 btn btn-warning text-light" type="button" style="width:60px;" role="tab" aria-selected="false">Home</ơ>
+                                            </div>
+                                            <div class="col p-2 p-lg-0">
+                                                <span class="border border-warning  p-1 btn " style="width:60px;">TYK</span>
+                                            </div>
+                                            <div class="col p-2 p-lg-0">
+                                                <span class="border border-warning p-1 btn " style="width:60px;">TYK</span>
+                                            </div>
+                                            <div class="col p-2 p-lg-0">
+                                                <span class="border  border-warning p-1 btn " style="width:60px;">TYKe</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="mt-5 d-flex">
+                                    <span class="fw-bold text-secondary me-4">Categories :</span>
+                                    <p ng-if="checkCondition( listPro.cate)">  {{namecate}}</p>
+                                </div>
+                                <div class="mt-3 d-flex">
+                                    <span class="fw-bold text-secondary me-4">Tags :</span>
+                                    <p>Button, Red, Tshirt</p>
+                                </div>
+                                <div class="mt-3 d-flex">
+                                    <span class="fw-bold text-secondary me-4">Share :</span>
+                                    <p class="d-flex ">
+                                        <a href="" class="nav-link mx-2  "><i class="fa-brands fa-facebook"></i></a>
+                                        <a href="" class="nav-link mx-2 "><i class="fa-brands fa-tiktok"></i></a>
+                                        <a href="" class="nav-link mx-2 "><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="" class="nav-link mx-2 "><i class="fa-brands fa-instagram"></i></a>
+                                    </p>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="container ">
+                                        <div class="row">
+                                            <div class="col-12 col-xl-3 ">
+                                                <div class="input-group">
+                                                    <button class="btn btn-outline-warning" type="button" ng-click="giam()">-</button>
+                                                    <input type="text" class="w-50 form-control text-center border-warning" name="" id="" ng-model="sl" readonly         >
+                                                    <button class="btn btn-outline-warning" type="button" ng-click="tang()">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-5 col-12 mt-xl-0 mt-3">
+                                                <button class="btn btn-warning text-light me-3" ng-click="addCart()"> <i class="fa-solid me-2 fa-cart-shopping"></i>Add Cart</button>
+                                                <button class="btn btn-danger">Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12">
+
+                    <ul class="nav nav-pills mb-3 border-bottom p-3 " id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link border border-warning me-3 " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">PRODUCT DETAILS</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link border border-warning me-3 active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">REVIEW(09)</button>
+                        </li>
+                        <li class="nav-item  mt-3 mt-lg-0 " role="presentation">
+                            <button class="nav-link border border-warning" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Evaluate</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade  " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                           
+                            <p>
+                                {{listPro.content}}
+                            </p>
+                        </div>
+                        <div class="tab-pane fade  show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                            <h2>Reviews</h2>
+                            <div class="container">
+                                <!-- begin rating  -->
+                                <div class="row pb-5 border-bottom">
+                                    <div class="col-lg-3 col-sm-12 p-3 shadow rounded d-flex flex-column align-items-center">
+                                        <span class="h1 mb-0">4.8</span>
+                                        <div>
+                                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        </div>
+                                        <small class="text-black-50">12 Ratings</small>
+                                    </div>
+                                    <div class="col-lg-9 col-sm-12 mt-lg-0 mt-3">
+                                        <div class="container ps-5">
+                                            <div class="row align-items-center">
+                                                <div class="col-1 px-0">5<i class="ms-1 fa-solid fa-star" style="color: #FFD43B;"></i></div>
+                                                <div class="col-10 px-0">
+                                                    <div class="w-100 bg-secondary rounded-pill">
+                                                        <div class="py-1 rounded-pill bg-warning w-75" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="80%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1">2</div>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-1 px-0">4<i class="ms-1 fa-solid fa-star" style="color: #FFD43B;"></i></div>
+                                                <div class="col-10 px-0">
+                                                    <div class="w-100 bg-secondary rounded-pill">
+                                                        <div class="py-1 rounded-pill bg-warning w-50" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="50%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1">1</div>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-1 px-0">3<i class="ms-1 fa-solid fa-star" style="color: #FFD43B;"></i></div>
+                                                <div class="col-10 px-0">
+                                                    <div class="w-100 bg-secondary rounded-pill">
+                                                        <div class="py-1 rounded-pill w-100" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="0%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1">0</div>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-1 px-0">2<i class="ms-1 fa-solid fa-star" style="color: #FFD43B;"></i></div>
+                                                <div class="col-10 px-0">
+                                                    <div class="w-100 bg-secondary rounded-pill">
+                                                        <div class="py-1 rounded-pill w-100" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="0%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1">0</div>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-1 px-0">1<i class="ms-1 fa-solid fa-star" style="color: #FFD43B;"></i></div>
+                                                <div class="col-10 px-0">
+                                                    <div class="w-100 bg-secondary rounded-pill">
+                                                        <div class="py-1 rounded-pill w-100" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="0%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end rating  -->
+
+                                <div class="row  my-5">
+
+                                    <div class="col-10">
+                                        <div class="d-flex">
+                                            <div class="mx-3">
+                                                <img src="../lib/img/avatar/img_01.jpg" alt="">
+                                            </div>
+                                            <div class="">
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="mb-0"> Jura Hujaor <small class="ms-2 text-black-50">2 Days ago</small></p>
+                                                    <div>
+                                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+
+                                                    </div>
+                                                </div>
+                                                <p class="h6 my-1">The best LMS Design System</p>
+                                                <div>
+
+                                                    <small class="text-black-50">Maximus ligula eleifend id nisl quis interdum. Sed malesuada tortor non turpis semper bibendum nisi porta, malesuada risus nonerviverra dolor. Vestibulum ante ipsum primis in faucibus.</small>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                            <form class="row g-3 w-50 d-lg-flex  d-none m-auto mt-3">
+                                <h4>Conment</h4>
+                                <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label">Email : </label>
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputPassword4" class="form-label">Name :</label>
+                                    <input type="text" class="form-control" id="inputPassword4" placeholder="UseName">
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputAddress" class="form-label">Title : </label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="Titel">
+                                </div>
+                                <div class="col-12 d-flex align-items-center">
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputAddress" class="form-label">Conment : </label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                            <form class="row g-3  d-lg-none m-auto mt-3">
+                                <h4>Conment</h4>
+                                <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label">Email : </label>
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputPassword4" class="form-label">Name :</label>
+                                    <input type="text" class="form-control" id="inputPassword4" placeholder="UseName">
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputAddress" class="form-label">Title : </label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="Titel">
+                                </div>
+                                <div class="col-12 d-flex align-items-center">
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputAddress" class="form-label">Conment : </label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="my-4">Related Product</h3>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+
+                <div class="col" ng-repeat="val in listPro1 | limitTo : 4   " >
+                    <div class="card h-100">
+                     
+                        
+                            <img src="{{val.image}}" class="card-img-top w-50 m-auto"  alt="...">
+                            <div class="card-body">
+                                <div class="card-text d-flex align-items-center ">
+                                    <span class="text-warning  ">
+                                    <i class="fa-solid fa-star fa-2xs"></i>
+                                    <i class="fa-solid fa-star fa-2xs"></i>
+                                    <i class="fa-solid fa-star fa-2xs"></i>
+                                    <i class="fa-regular fa-star fa-2xs"></i>
+                                    <i class="fa-regular fa-star fa-2xs"></i>
+                                </span>
+                                    <p class="text-bo ms-3 text-dark mt-3 opacity-50 ">
+                                        (126) Review
+                                    </p>
+                                </div>
+                                <h6 hclass="card-title"> <a href="#!/product/{{val.id}}" class="card-title fw-medium fs-6 nav-link">{{val.name | uppercase}}</a></h6>
+                                <p class="card-text text-bo mt-3">
+                                    <span class="text-dark opacity-50">Available:</span> 334
+                                </p>
+                                <div class=" d-flex">
+                                    <p class="text-danger fw-medium">{{val.price - (val.price * val.sale/100)  |currency }}</p> <span class="ms-3 text-decoration-line-through text-dark opacity-50 fw-bolder " ng-if="val.sale != 0 ">{{val.price |currency}}</span>
+                                </div>
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+</main>

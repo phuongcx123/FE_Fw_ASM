@@ -1,0 +1,53 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>PRODUCTS</h1>
+        <nav>
+            <ol class="breadcrumb mt-3">
+                <li class="breadcrumb-item"><a href="#!/">Home</a></li>
+                <li class="breadcrumb-item active">Category</li>
+            </ol>
+        </nav>
+    </div>
+    <section class="section dashboard">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="card">
+                    <h5 class="card-header"> <a href="#!/add-cate" class="btn btn-success ">Add Category</a></h5>
+                    <div class="card-body">
+
+                        <p class="card-text d-flex justify-content-end mt-3">
+                            <input class="form-control  w-25 " type="search" placeholder="Search" ng-model="loc" aria-label="Search">
+                        </p>
+                        <table class="table table-hover table-sm text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name<i class=" ms-1 bi bi-arrow-down-up" ng-click="sortData('name_cate')"></i></th>                           
+                                    <th scope="col">Author</th>
+                                    <th scope="col">Act</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                                <tr class="align-baseline" ng-repeat="(index,value) in cate | orderBy : columnName : reserve | filter: {name_cate : loc} ">
+                                    <th scope="row" ng-bind="index+1"></th>
+                                    <td>{{ value.name_cate| uppercase}}</td>
+                                    <td ng-if="checkAutur(value.author)">{{hihi}}</td>
+                                    <td>
+                                        <a class="btn btn bg-success text-light" href="#!/detail-cate/{{value.id}}"><i class="fa-solid fa-pen"></i></a>
+                                        <button id="showAlertButton" class="btn btn-danger" ng-click="deleteCate(value.id)"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>

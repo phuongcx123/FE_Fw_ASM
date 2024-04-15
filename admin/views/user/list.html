@@ -1,0 +1,59 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>User</h1>
+        <nav>
+            <ol class="breadcrumb mt-3">
+                <li class="breadcrumb-item"><a href="#!/">Home</a></li>
+                <li class="breadcrumb-item active">List User</li>
+            </ol>
+        </nav>
+    </div>
+    <section class="section dashboard">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="card">
+                    <h5 class="card-header"> <a href="#!/user-add" class="btn btn-success ">Add User</a></h5>
+                    <div class="card-body">
+
+                        <p class="card-text d-flex justify-content-end mt-3">
+                            <input class="form-control  w-25 " type="search" placeholder="Search" ng-model="locuser" aria-label="Search">
+                        </p>
+                        <table class="table table-hover table-sm text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name<i class=" ms-1 bi bi-arrow-down-up" ng-click="sortData('name_user')"></i></th>
+                                    <th scope="col">UserName<i class=" ms-1 bi bi-arrow-down-up " ng-click="sortData('username')"></i></th>
+                                    <th scope="col">Date founded<i class=" ms-1 bi bi-arrow-down-up " ng-click="sortData('bird')"></i></th>
+                                    <th scope="col">Position</th>
+                                    <th scope="col">Act</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                                <tr class="align-baseline" ng-repeat="(index,value) in listUrer | filter : {name_user : locuser} |orderBy : columnName : reserve ">
+                                    <th scope="row" ng-bind="index+1"></th>
+                                    <td>{{ value.name_user| uppercase}}</td>
+                                    <td>{{value.username }}</td>
+                                    <td>{{value.bird | date : "dd/MM/yyyy"}}</td>
+                                    <td ng-if="value.roles == 1">admin</td>
+                                    <td ng-if="value.roles != 1">User</td>
+
+                                    <td>
+                                        <a class="btn btn bg-success text-light" href="#!/user-detail/{{value.id}}"><i class="fa-solid fa-pen"></i></a>
+                                        <button id="showAlertButton" class="btn btn-danger" ng-if="value.id != 1" ng-click="deleteUser(value.id)"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>

@@ -1,0 +1,226 @@
+{
+  "products": [
+    {
+      "id": "f5c7",
+      "name": "Ip 1551",
+      "image": "data:image/webp;base64,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",
+      "price": "123",
+      "sale": "1",
+      "content": "gfds",
+      "cate": "1675",
+      "authu": "1"
+    },
+    {
+      "id": "f7d6",
+      "name": "Sam Sung Galaxy 5G",
+      "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR1SPiSvsmIujzLtKYvMrzZknvmOXDdC6YyDlYDEbYEo7-cnb3Pwy8EE5Y60UnoJc6k70sMhNB4dNaY2VB800pDl8SnktiJZK0qiFPz7GxIXNuqSIRMql5dIcMJstFvB0OyGu-aAqDN&usqp=CAc",
+      "price": "120",
+      "sale": "10",
+      "content": "jkghgfds",
+      "cate": "2",
+      "authu": "1"
+    },
+    {
+      "id": "12c7",
+      "name": "Phuong",
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR90UmbJBLwBI8vFPIMPULj0HnevoyusbPQWepBqxbPtu2AgWkpZGt8rbYYdaysZ9C_p3zlPoTqr0imIi3deqiBDsjLtFcLDdWZmfWRhWHrNzTvQQCdmC-87i2JH_V4LKxoG8tyaw4&usqp=CAc",
+      "price": "100",
+      "sale": "50",
+      "content": "hihihi test",
+      "cate": "1",
+      "authu": "8d08"
+    },
+    {
+      "id": "c836",
+      "name": "Sam Sung Galaxy 5G 132",
+      "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR1SPiSvsmIujzLtKYvMrzZknvmOXDdC6YyDlYDEbYEo7-cnb3Pwy8EE5Y60UnoJc6k70sMhNB4dNaY2VB800pDl8SnktiJZK0qiFPz7GxIXNuqSIRMql5dIcMJstFvB0OyGu-aAqDN&usqp=CAc",
+      "price": "100",
+      "sale": "30",
+      "content": ";jlhkjghgfds",
+      "cate": "1",
+      "authu": "1"
+    },
+    {
+      "id": "1a2d",
+      "name": "Phuong",
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR90UmbJBLwBI8vFPIMPULj0HnevoyusbPQWepBqxbPtu2AgWkpZGt8rbYYdaysZ9C_p3zlPoTqr0imIi3deqiBDsjLtFcLDdWZmfWRhWHrNzTvQQCdmC-87i2JH_V4LKxoG8tyaw4&usqp=CAc",
+      "price": "123",
+      "sale": "100",
+      "content": "zfbkjkdgbhvjvkf",
+      "cate": "2",
+      "authu": "8d08"
+    }
+  ],
+  "category": [
+    {
+      "id": "1",
+      "name_cate": "Điện Thoại",
+      "author": "1"
+    },
+    {
+      "id": "2",
+      "name_cate": "Đồ Gia Dụng",
+      "author": "1"
+    },
+    {
+      "id": "9343",
+      "name_cate": "admin",
+      "author": "1"
+    },
+    {
+      "id": "1675",
+      "name_cate": "admin12",
+      "author": "8d08"
+    },
+    {
+      "id": "5754",
+      "name_cate": "admin123",
+      "author": "1"
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "name_user": "Phuong",
+      "bird": "17/08/2004",
+      "username": "admin",
+      "password": "123",
+      "roles": "1"
+    },
+    {
+      "id": "d4bf",
+      "name_user": "fgh",
+      "bird": "2024-04-05",
+      "username": "fgh",
+      "password": "fgh",
+      "roles": "1"
+    },
+    {
+      "id": "8d08",
+      "name_user": "phuonhhhh",
+      "bird": "2024-04-06",
+      "username": "dsfs",
+      "password": "123",
+      "roles": "1"
+    }
+  ],
+  "cart": [],
+  "oder": [
+    {
+      "id": "60ee",
+      "name": "Cao Xuân Phương",
+      "id_pro": [
+        "f5c7"
+      ],
+      "active": "2",
+      "so_luong": [
+        1
+      ],
+      "sdt": "0985679042",
+      "address": "Thôn 1 Thuần Mỹ Ba Vì",
+      "email": "phuong@123gmial.com",
+      "Tong": 124.77,
+      "date": "2024-04-10T08:12:04.767Z"
+    },
+    {
+      "id": "cac8",
+      "name": "Cao Xuân Phương",
+      "id_pro": [
+        "f5c7",
+        "f7d6"
+      ],
+      "active": "2",
+      "so_luong": [
+        1,
+        1
+      ],
+      "sdt": "0985679042",
+      "address": "Thôn 1 Thuần Mỹ Ba Vì",
+      "email": "phuong@123gmial.com",
+      "Tong": 232.76999999999998,
+      "date": "2024-04-10T08:12:34.455Z"
+    },
+    {
+      "id": "fa02",
+      "name": "Cao Xuân Phương",
+      "id_pro": [
+        "12c7"
+      ],
+      "active": "1",
+      "so_luong": [
+        1
+      ],
+      "sdt": "0985679042",
+      "address": "Thôn 1 Thuần Mỹ Ba Vì",
+      "email": "phuong@123gmial.com",
+      "Tong": 53,
+      "date": "2024-04-10T08:12:53.903Z"
+    },
+    {
+      "id": "7621",
+      "name": "Cao Xuân Phương",
+      "id_pro": [
+        "c836"
+      ],
+      "active": "1",
+      "so_luong": [
+        1
+      ],
+      "sdt": "0985679042",
+      "address": "Thôn 1 Thuần Mỹ Ba Vì",
+      "email": "phuong@123gmial.com",
+      "Tong": 73,
+      "date": "2024-04-10T08:13:28.569Z"
+    },
+    {
+      "id": "c2a7",
+      "name": "Cao Xuân Phương",
+      "id_pro": [
+        "f7d6"
+      ],
+      "active": "1",
+      "so_luong": [
+        1
+      ],
+      "sdt": "0985679042",
+      "address": "Thôn 1 Thuần Mỹ Ba Vì",
+      "email": "Thôn 1 Thuần Mỹ Ba Vì",
+      "Tong": 111,
+      "date": "2024-04-10T08:44:08.113Z"
+    },
+    {
+      "id": "5b71",
+      "name": "Cao Xuân Phương",
+      "id_pro": [
+        "f5c7",
+        "f7d6"
+      ],
+      "active": "2",
+      "so_luong": [
+        3,
+        1
+      ],
+      "sdt": "0985679042",
+      "address": "phuong@123gmial.com",
+      "email": "Thôn 1 Thuần Mỹ Ba Vì",
+      "Tong": 476.31,
+      "date": "2024-04-10T09:59:33.588Z"
+    },
+    {
+      "id": "668b",
+      "name": "Cao Xuân Phương",
+      "id_pro": [
+        "f7d6"
+      ],
+      "active": "1",
+      "so_luong": [
+        1
+      ],
+      "sdt": "0985679042",
+      "address": "phuong@123gmial.com",
+      "email": "Thôn 1 Thuần Mỹ Ba Vì",
+      "Tong": 111,
+      "date": "2024-04-10T10:02:46.983Z"
+    }
+  ]
+}

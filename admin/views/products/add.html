@@ -1,0 +1,68 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>PRODUCTS</h1>
+        <nav>
+            <ol class="breadcrumb mt-3">
+                <li class="breadcrumb-item"><a href="#!/">Home</a></li>
+                <li class="breadcrumb-item active">Add Product</li>
+            </ol>
+        </nav>
+    </div>
+    <section class="section dashboard">
+        <div class="row">
+            <div class="col-12">
+                <div class="container w-100 ">
+                    <div class="w-100 h-100 m-auto">
+                        <form class="mt-5 border border-warning rounded-3 p-4 bg-white">
+                            <h5>From Add Products</h5>
+                            <div class="mb-4">
+                                <label for="exampleInputEmail1" class="form-label">Name Products: </label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="product_data.name" placeholder="Name Products">
+                                <span class="text-danger fs-6" ng-show="validate.name">{{error.name}}</span>
+                            </div>
+                            <div class="mb-4">
+                                <label for="exampleInputEmail1" class="form-label">Image products</label>
+                                <input type="text" class="form-control" ng-model="product_data.image" id="inputGroupFile02" placeholder="image">
+                                <span class="text-danger fs-6" ng-show="validate.image">{{error.image}}</span>
+                            </div>
+                            <div class="mb-4">
+                                <label for="exampleInputEmail1" class="form-label">Price</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="text" class="form-control" placeholder="0.00" ng-model="product_data.price" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-text">.00</span>
+                                </div>
+                                <span class="text-danger fs-6" ng-show="validate.price"> {{error.price}}</span>
+                            </div>
+                            <div class="mb-4">
+                                <label for="exampleInputEmail1" class="form-label">Sale(%)</label>
+                                <input type="text" class="form-control" placeholder="0" ng-model="product_data.sale" aria-label="Amount (to the nearest dollar)">
+                                <span class="text-danger fs-6" ng-show="validate.sale"> {{error.sale}}</span>
+                            </div>
+                            <div class="mb-4">
+                                <label for="exampleInputEmail1" class="form-label">Content:</label>
+                                <textarea class="form-control" aria-label="With textarea" ng-model="product_data.content"></textarea>
+                                <span class="text-danger fs-6" ng-show="validate.content">{{error.content}}</span>
+                            </div>
+                            <div class="mb-4">
+                                <div class="input-group mb-4">
+                                    <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                                    <select class="form-select" id="inputGroupSelect01" ng-model="product_data.cate">
+                                     <option value="" hidden>-------------------------------------Category---------------------------------</option>
+                                      <option value="{{value.id}}" ng-repeat="value in cate">{{value.name_cate}}</option>
+                                    </select>
+
+                                </div>
+                                <span class="text-danger fs-6" ng-show="validate.cate">{{error.cate}}</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary " ng-click="addProducts()">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>

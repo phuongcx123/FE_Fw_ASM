@@ -1,0 +1,128 @@
+<main class="my-2">
+    <div class="container-fluid">
+        <!-- begin banner  -->
+        <div class="row pb-2">
+            <div class="col-12 px-0">
+                <div class="background">
+                    <div class="container mt-4">
+
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item "><a class="nav-link fw-bold" href="#!/">Home</a></li>
+                                <li class="breadcrumb-item active text-danger fw-medium" aria-current="page">Cart</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end banner  -->
+
+        <!-- begin form login  -->
+        <div class="container-md container-fluid">
+           
+                <h4 ng-if="khongtontai">Hiện Tại Bạn Không có Sản Phẩm  Trong Giỏ</h4>
+          
+            <div class="row"  ng-show="tontai">
+                <div class="col-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col" colspan="2"></th>
+                                <th scope="col">Product</th>
+                                <th scope="col">Price</th>
+                                <th>Quantily</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                     
+                        <tbody >
+                            <tr class="align-baseline" ng-repeat="(i,v) in Cart_list">
+                                <th scope="row"><button class="btn btn-close" ng-click="xoaCart(v.id)"></button></th>
+                                <td><img src="{{v.productInfo.image}}" class="w-25" alt=""></td>
+                                <td>{{v.productInfo.name}}</td>
+                                <td>{{v.productInfo.price - (v.productInfo.price * v.productInfo.sale/100) |currency}}</td>
+                                <td class="w-25">
+                                    <input type="number" class="form-control w-50 text-center" ng-model="v.so_luong" name="" min="1" id="">
+                                </td>
+                                <td>{{ v.price_tong |currency }}</td>
+                            </tr>
+
+                        </tbody>
+                        <tfoot class="border-0">
+                            
+                            
+                           
+                        <th class="border-0"><button ng-click="xoaAllCart()" class="btn btn-dark mt-3">Delete All Cart</button> <button ng-click="updateCart()" class="btn btn-dark mt-3">Update Cart</button></th>
+                           
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="col-12">
+                    <h3>Cart Totals</h3>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-lg-7 col-sm-12 px-4 ">
+                                <div class="my-3">
+                                    <h4>Personal information</h4>
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="inputEmail4" class="form-label">UserName</label>
+                                            <input type="text" class="form-control" id="inputEmail4" placeholder="name" ng-model="name" >
+                                            <p class="text-danger" ng-if="check.name" >bạn không được để trống </p>
+                                        
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputPassword4" class="form-label">Phone</label>
+                                            <input type="text" class="form-control" id="inputPassword4" placeholder="098.xxx.xxx" ng-model="sdt" >
+                                            <p class="text-danger" ng-if="check.sdt" >bạn không được để trống </p>
+
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputAddress" class="form-label">Address</label>
+                                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" ng-model="address" >
+                                            <p class="text-danger" ng-if="check.address" >bạn không được để trống </p>
+
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputAddress" class="form-label">Email</label>
+                                            <input type="text" class="form-control" id="inputAddress" placeholder="Email" ng-model="email">
+                                            <p class="text-danger" ng-if="check.email" >bạn không được để trống </p>
+                                        </div>
+                                       
+                                      
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-4 col-sm-12 bg-body-secondary">
+                                <div class="d-flex justify-content-between my-3">
+                                    <input type="text" class="form-control" placeholder="Coupon Code"> <button class="btn btn-success ms-4">Apply</button>
+                                </div>
+                                <div class="d-flex justify-content-between mt-3">
+                                    <p class="fw-bold text-danger p-0">SUBTOTAL :</p> <span class="fw-medium text-info">{{Tong | currency}}</span>
+                                </div>
+                                <div class="d-flex justify-content-between mt-2">
+                                    <p class="fw-bold p-0">Shipping :</p> <span class="fw-medium" >$3.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between mt-2">
+                                    <p class="fw-bold p-0">Coupon Code :</p> <span class="fw-medium text-danger text-decoration-line-through" ng-if="false">$5.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between mt-2 py-3 border-top border-white">
+                                    <p class="fw-bold p-0">Total : </p> <span class="fw-medium text-success" >{{Tong+3 |currency }}</span>
+                                </div>
+                                <div class="d-flex justify-content-end  mt-2 py-3 border-top border-white">
+                                    <button class="btn btn-danger" ng-click="BuyNow()">Order <i class="fa-solid fa-arrow-right"></i></button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end form login  -->
+    </div>
+</main>

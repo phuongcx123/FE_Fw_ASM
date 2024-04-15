@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../lib/img/favicon.png" type="images/x-icon" />
+    <title>Radios - Electronics Store</title>
+    <link rel="stylesheet" href="../lib/css/all.min.css">
+    <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <!-- start header -->
+    <!-- <div class="" ng-include="'layout/_header_home.html'" ng-show=""></div> -->
+    <div class="" ng-include="'layout/_header_home.html'"></div>
+    <!-- end header -->
+    <div class="" ng-view></div>
+    <!-- start footer -->
+    <div class="" ng-include="'layout/_footer.html'"></div>
+    <!-- end footer -->
+
+    <script src="../lib/js/all.min.js"></script>
+    <script src="../lib/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/js/angular.min.js"></script>
+    <script src="../lib/js/angular-route.min.js"></script>
+    <script src="controller/loginController.js"></script>
+    <script src="controller/signupController.js"></script>
+    <script src="controller/homeController.js"></script>
+    <script src="controller/detailProContronler.js"></script>
+    <script src="controller/shopController.js"></script>
+    <script src="controller/cartController.js"></script>
+    <script src="controller/oderController.js"></script>
+
+    <script>
+        var myApp = angular.module("myApp", ['ngRoute'])
+            //             controller: ListProductController,
+        myApp.config(($routeProvider) => {
+            $routeProvider
+                .when("/", {
+                    templateUrl: 'view/home.html',
+                    controller: homeController,
+                })
+                .when("/shop", {
+                    templateUrl: 'view/shop.html',
+                    controller: shopController,
+                })
+                .when("/cart", {
+                    templateUrl: 'view/cart.html',
+                    controller: cartController,
+                })
+                .when("/product/:id", {
+                    templateUrl: 'view/products-detait.html',
+                    controller: detailProContronler,
+                })
+                .when("/signup", {
+                    templateUrl: 'view/signup.html',
+                    controller: signupController
+                })
+                .when("/login", {
+                    templateUrl: 'view/login.html',
+                    controller: loginController,
+                }).when("/oder/:id", {
+                    templateUrl: 'view/oder.html',
+                    controller: oderController
+                })
+                .otherwise({
+                    redirectTo: "/"
+                })
+        });
+    </script>
+    <script src="controller/headerController.js"></script>
+
+    <!-- <script src="lib/js/main.js"></script> -->
+
+</body>
+
+</html>

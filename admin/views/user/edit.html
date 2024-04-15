@@ -1,0 +1,56 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>PRODUCTS</h1>
+        <nav>
+            <ol class="breadcrumb mt-3">
+                <li class="breadcrumb-item"><a href="#!/">Home</a></li>
+                <li class="breadcrumb-item active">Detail Product</li>
+            </ol>
+        </nav>
+    </div>
+    <section class="section dashboard">
+        <div class="row">
+            <div class="col-12">
+                <div class="container w-100 ">
+                    <div class="w-100 h-100 m-auto">
+                        <form class="mt-5 border border-warning rounded-3 p-4 bg-white">
+                         
+                            <div class="mb-4">
+                                <label for="exampleInputEmail1" class="form-label">Name Acconut : </label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="data.name_user" placeholder="Name Products">
+                                <span class="text-danger fs-6" ng-show="validate.name">{{name}}</span>
+                            </div>
+                            <div class="mb-4">
+                                <label for="exampleInputEmail1" class="form-label">UserName</label>
+                                <input type="text" class="form-control" ng-model="data.username" id="inputGroupFile02" placeholder="UserName">
+                                <span class="text-danger fs-6" ng-show="validate.user">{{user}}</span>
+                            </div>
+                            <div class="mb-4">
+                                <label for="exampleInputEmail1" class="form-label">Passworld</label>
+                                <input type="text" class="form-control" placeholder="Passworld" ng-model="data.password">
+                                <span class="text-danger fs-6" ng-show="validate.pass"> {{pass}}</span>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="input-group mb-4">
+                                    <label class="input-group-text" for="inputGroupSelect01">Roles</label>
+                                    <select class="form-select" id="inputGroupSelect01" ng-model="data.roles">
+                                     <option value="" hidden>-------------------------------------Roles---------------------------------</option>
+                                      <option value="1">Admin</option>
+                                      <option value="2">User</option>
+                                    </select>
+
+                                </div>
+                                <span class="text-danger fs-6" ng-show="validate.roles">{{roles}}</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary " ng-click="signup()">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
